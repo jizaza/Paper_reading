@@ -1,0 +1,30 @@
+0912-0918论文阅读问题记录
+
+# Early Exit or Not:  Resource-Efficient Blind Quality Enhancement  for Compressed Images
+
+- [ ]  为什么网络会采取unet的架构
+- [ ]  为什么要采取dense connection
+- [ ]  3.3如果按照附录中fig2分成不重叠的patch，不会导致边缘的信息丢失吗？
+- [ ]  4.1 we compress the cropped raw images by HEVC-MSP using HM16.5 under intra-coding configuration这种训练时采用了已知的压缩还可以算盲增强吗？还是说因为对同一个网络结构使用了两种不同压缩方式的数据所以可以算盲增强？
+- [ ]  4.3可以重新将CBDNet这些通过在压缩图片上训练来达到目的，那是不是说一些其他的子任务和有损压缩图片的恢复仅仅是操作对象的不同？但是有损压缩更集中于解决比如块效应、模糊之类的问题？
+- [ ]  如果解决不同quality的压缩除了渐进的，是否有其他办法呢？
+
+# DAQE: Enhancing the Quality of Compressed  Images by Exploiting the Inherent  Characteristic of Defocus
+
+- [ ]  其实对**图片的texture**这种理解也不是很深（Intuitively, the patches with dissimilar defocus values are blurred more diversely; consequently, their texture patterns are also blurred more diversely than those with similar defocus values.
+- [ ]  只采样回来一次吗？还以为会是类似于Early Exit or Not那种
+    
+    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/12d6f12b-5609-4296-80b7-7c4040c8a702/2a97eb14-d29e-4853-a75a-cf50387c79ed/image.png)
+    
+- [ ]  5.1 “The cosine annealing schedule [71] is applied to decrease the learning rate automatically.”是什么
+- [ ]  5.1 . We first train DENet on the training set of SYNDOF. After the convergence of DENet, we freeze the parameters of DENet and train the subsequent AGNet and QENet jointly on the DIV2K training set until convergence.为什么要分段训呢
+
+# Multi-Frame Quality Enhancement for Compressed Video
+
+- [ ]  reduce the artifacts of intra- and inter-coding,不是很理解这个是什么
+- [ ]  As shown in Figure 5, the STMC method adopts the convolutional layers to estimate the ×4 and ×2 down-scaling Motion Vector (MV) maps,为什么要预测这两个
+
+# Building Dual-Domain Representations for Compression Artifacts Reduction
+
+- [ ]  为什么SRCNN不能更深，但DDCN是可以的？
+- [ ]  3.5 However, such solutions are not suitable for compression artifacts reduction.为什么low-level里不适应于BN？（不能保持差异性吗？
