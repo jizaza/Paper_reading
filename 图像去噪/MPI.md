@@ -1,5 +1,5 @@
 # Masked Pre-training Enables Universal Zero-shot Denoiser
-论文网址：https://arxiv.org/pdf/2401.14966
+论文网址：https://arxiv.org/pdf/2401.14966 \\
 论文代码：https://github.com/krennic999/MPI
 自定的关键词：zero-shot、masked image modelling
 
