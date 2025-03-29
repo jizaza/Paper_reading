@@ -33,4 +33,8 @@ $$||\tilde{I}-\tilde{I}||_2$$
 
 ## 补充的知识
 在《Masked Image Training for Generalizable Deep Image Denoising》中提出了mask denoising  
-主要观点是**模型靠识别噪声本身来去噪，对未见过的噪声模型表现不好**，而通过mask可以迫使模型去理解图像内容。
+主要观点是**模型靠识别噪声本身来去噪，对未见过的噪声模型表现不好**，而通过mask可以迫使模型去理解图像内容。  
+
+DIP（2018）（https://openaccess.thecvf.com/content_cvpr_2018/papers/Ulyanov_Deep_Image_Prior_CVPR_2018_paper.pdf）  
+很神奇的文章，maybe是one-shot的开端（？）  
+证明的就是网络本身有隐含先验信息可以来恢复图像
