@@ -22,7 +22,8 @@ $$\underset{\theta}{\arg \max } p(I \odot \hat{M} \mid I \odot M ; \theta)$$
 可以得知，作者是想在随机遮盖的情况下恢复原图。  
 :thinking:loss为什么不是
 $$||\tilde{I}-\tilde{I}||_2$$
-感觉现在这个像我在被遮住的地方和原图尽可能相似，而不是全图和原图尽可能相似
+现在这个像我在被遮住的地方和原图尽可能相似，而不是全图和原图尽可能相似  
+从PPT里也可以理解如果缺少预训练模型，则可能只学习恢复被mask的区域，预训练模型起的作用就是保证层与层之间的区分性，不至于过早地过拟合
 
 ![image](https://github.com/user-attachments/assets/cfdb189e-e6b2-4e80-a5cf-ef3ece26139e)
 这个iterative大概是在每个时间步恢复一部分，最终可以达到一个较优结果
