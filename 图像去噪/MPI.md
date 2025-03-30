@@ -24,6 +24,8 @@ $$\underset{\theta}{\arg \max } p(I \odot \hat{M} \mid I \odot M ; \theta)$$
 $$||\tilde{I}-\tilde{I}||_2$$
 感觉现在这个像我在被遮住的地方和原图尽可能相似，而不是全图和原图尽可能相似
 
+![image](https://github.com/user-attachments/assets/cfdb189e-e6b2-4e80-a5cf-ef3ece26139e)
+这个iterative大概是在每个时间步恢复一部分，最终可以达到一个较优结果
 
 ## 实验
 - 实验需求：2块3090+48000张ImageNet(感觉应该所有算力需求都在预训练上）
